@@ -1310,8 +1310,8 @@ class SolarBarCard extends HTMLElement {
               ` : ''}
               ${anticipatedPotential > 0 && (forecast_entity || use_solcast) ? `
                 <div class="legend-item" data-entity="${forecast_entity}" title="Click to view forecast history">
-                  <div class="legend-color battery-charge-color"></div>
-                  <span>Usage${show_legend_values ? ` ${anticipatedPotential.toFixed(decimal_places)}kW` : ''}</span>
+                  <div class="legend-color anticipated-color"></div>
+                  <span>Forecast ${show_legend_values ? ` ${anticipatedPotential.toFixed(decimal_places)}kW` : ''}</span>
                 </div>
               ` : ''}
               ${(solarToEv > 0 || gridToEv > 0) ? `
