@@ -1216,7 +1216,7 @@ class SolarBarCard extends HTMLElement {
                   ${shouldShowSegmentText((batterySOC / 100) * batteryBarWidth, `${batterySOC.toFixed(decimal_places)}%`, 100) ? `<div class="bar-overlay-label">${batterySOC.toFixed(decimal_places)}%</div>` : ''}
                 </div>
               ` : ''}
-              <div class="solar-bar-wrapper ${isIdle ? 'standby' : ''}" style="width: ${powerBarWidth}%" data-entity="${production_entity}" title="Click to view solar production history">
+              <div class="solar-bar-wrapper ${isIdle ? 'standby' : ''}" style="width: ${powerBarWidth}%" data-entity="${production_entity}" oldtitle="Click to view solar production history">
                 <div class="solar-bar">
                   ${solarHomePercent > 0 ? `<div class="bar-segment solar-home-segment" style="width: ${solarHomePercent}%">${show_bar_values && solarToHome > 0.1 && shouldShowSegmentText(solarHomePercent, `${solarToHome.toFixed(decimal_places)}kW`, powerBarWidth) ? `${solarToHome.toFixed(decimal_places)}kW` : ''}</div>` : ''}
                   ${solarEvPercent > 0 ? `<div class="bar-segment solar-ev-segment" style="width: ${solarEvPercent}%">${show_bar_values && solarToEv > 0.1 && shouldShowSegmentText(solarEvPercent, `${solarToEv.toFixed(decimal_places)}kW EV`, powerBarWidth) ? `${solarToEv.toFixed(decimal_places)}kW EV` : ''}</div>` : ''}
